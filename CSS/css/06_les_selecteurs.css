@@ -1,0 +1,154 @@
+body {
+    background-color:pink ;
+    font-size: 18px;
+    
+}
+
+h1 {
+    color: blue;
+}
+
+div {
+    background-color: brown;
+    width: 50%;
+    padding: 10px;   
+}
+
+div p  {
+    color: aliceblue;
+}
+
+div :first-child {/* Pseudo class :first-child -> désigne le premier element enfant */
+    color: darkorange;
+}
+
+div :nth-child(5) {
+    /* pseudo-class :nth-child() -> permet d'accéder à un élément depuis son indice*/
+    color: darkgreen ;
+    font-weight: bolder;
+}
+
+div :last-child {/* Pseudo class :last-child -> désign le dernier element enfant */
+    background-color: chartreuse;
+}
+
+div :nth-child(even) {
+    /* tout les élément avec un ordre pair */
+    background-color: darkviolet;
+}
+div :nth-child(odd) {
+    /* tout les élément avec un ordre impair */
+    background-color: lightgreen;
+}
+
+div :nth-child(3), div :nth-child(6) {
+    text-transform: uppercase;
+}
+
+section.select  p {
+    /* Ici j'applique la couleur sur les élément p qui se trouvent dans l"'élément section avec la calsse select */
+    color: red;
+}
+
+section.select p:first-of-type , section.select p:last-of-type {
+    color: white;
+}
+section.select p:nth-of-type(3) {
+    color: black;
+}
+section div {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-style: italic;
+}
+section div:not(.zoneB) {
+    font-weight: bolder;
+}
+
+section.select div.zoneA { 
+    color: white;
+}
+
+section.select div#zoneC{
+    color: blue;
+}
+
+#zoneD span {
+    color: cadetblue;
+    background-color: brown;
+}
+
+section div#zone1 {
+    height: 150px;
+    margin-top: 20px;
+}
+
+#zone1 h3, #zone1 p{
+    background-color: brown;
+    color: black;
+}
+
+#zone1::before {
+    /* On rajoute du contenu avant l'id 1 */
+    content: "Rajouté avant la zone 1";
+    color: antiquewhite;
+}
+
+#zone1::after {
+    /* On rajoute du contenu après l'id 1 */
+    content: "Rajouté après la zone 1";
+    color: antiquewhite;
+}
+
+/* ::before et ::after sont des pseudo-éléments permettent de générer ces éléments "virtuels" lors de l'intérprétation du css uniquement */
+
+p.psde, p.psde span  {
+    color: #110133;
+    background-color: brown;
+}
+p.psde span {
+    position: relative;
+
+}
+p.psde span::before {
+  content:"👑"; 
+  position: absolute; 
+  top: -16px;
+  left: -13px;
+  transform: rotate(-30deg);
+}
+
+h4+p {
+    /* Séléctionne la première balise p située après un titre h4 */
+    font-weight: bolder;
+}
+
+h4~a {
+    /* Séléctionne toutes les balises a situées après le titre h4 */
+    background-color: aquamarine;
+}
+
+ul>li {
+    /* Selectionne tous les éléments li qui sont directement situé sous un élément ul */
+    list-style-type: square;
+    color: blue;
+}
+
+
+/*  selectionne tous les a qui ont un attribut title */
+a[title]{
+     background-color: deeppink;
+}
+
+a[title="Cliquez ici"] {
+    text-decoration: none;
+}
+/* 
+Le sélécteur "*" pour selectionner tout les élements dans ma page 
+ */
+*{
+
+}
+
+
+

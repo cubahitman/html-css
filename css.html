@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ou placer le CSS ? </title>
+
+    <style>
+        h1,
+        h2 {
+            background-color: pink;
+        }
+    </style>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+    <h1>Le CSS, Cascading Style Sheet</h1>
+    <p>Le CSS permet de faire du style sur nos pages html. </p>
+    <p>On peut placer le CSS a trois endroits.</p>
+
+    <h2>Le CSS dans la balise</h2>
+    <p>La première façon de faire du style dans un élément est de déclarer l'attribut style sur ceui-là. Ce n'est pas la
+        meilleure manière de le faire.</p>
+
+    <p>COucou, <span style="color: red;">je suis en rouge</span>.</p>
+
+    <h2>Le CSS dans l'en tête</h2>
+    <p>Une seconde façon de faire du style sur notre page est de mettre la balise style dans la partie head. Cette
+        méthode n'est toujours pas la plus conseillée mais elle permet plus de choses que la méthode balise. Exemple, on
+        met du rose en fond sur le h1 et sur les h2</p>
+
+    <h2>CSS dans une feuille de style externe</h2>
+    <p>La dernière et meilleure méthode pour faire du style est la méthode suivante : on crée un dossier css avec un fichier style.css à l'intérieur. Il faudra alors lier nos deux fichiers grâce à la balise link. On pourra alors faire du style sur les éléments qui se trouvent dans notre page. Exemple, on crée un fichier style.css dans lequel on déclare que tous les paragraphe doivent être en vert. </p>
+
+</body>
+
+</html>

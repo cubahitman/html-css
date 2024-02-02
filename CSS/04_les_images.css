@@ -1,0 +1,51 @@
+/*  */
+body {
+    background-color: #ff6633;
+}
+h2{
+    color: red;
+}
+
+.imageFond {
+    background-image:url(../img/fond.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 16px;
+    padding: 20px;
+}
+
+.imageFond  p {
+    width: 75%;
+    color: white;
+    margin: 44px auto 0 auto;
+    padding: 24px;
+    background-color: rgba(101, 199, 208, 0.6);
+    border-radius:30px ;
+}
+
+.image {
+    border: 5px solid #eee;
+    width: 400px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .5);
+    transition: 1s;
+}
+
+.image:hover {
+    transform: rotate(-7deg);
+}
+
+.rotation360:hover {
+    transform: rotate(-360deg);
+}
+
+.imgCheval {
+    width: 300px;
+    margin: 25px;
+    transition: 1s;
+    display: block;
+}
+
+.imgCheval:hover {
+    width: 450px;
+    margin-left: 50px;
+}

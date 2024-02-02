@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yacine Djediden : Les sélecteurs en CSS"
+    />
+    <meta name="author" content="Yacine Djediden" />
+    <link rel="stylesheet" href="css/06_les_selecteurs.css" />
+    <title>Les sélecteurs CSS</title>
+  </head>
+  <body>
+    <h1>Les sélecteurs CSS</h1>
+    <p>
+      Un sélecetur est un moyen de séléctionner un élément en CSS. On connaît
+      déjà les balises, les identifiants et les classes. IL existe d'autres,
+      comme les pseudos-classes mais aussi la sélection grâce aux enfants.
+    </p>
+    <div>
+      <!-- p{paragraphe $}*10 -->
+      <p>Paragraphe 1</p>
+      <p>Paragraphe 2</p>
+      <p>Paragraphe 3</p>
+      <p>Paragraphe 4</p>
+      <p>Paragraphe 5</p>
+      <p>Paragraphe 6</p>
+      <p>Paragraphe 7</p>
+      <p>Paragraphe 8</p>
+      <p>Paragraphe 9</p>
+      <p>Paragraphe 10</p>
+    </div>
+    <section class="select">
+      <!-- 
+            -class="" -> est attribut qui peut se mettre sur 'importe quelle balise (ouvrante)
+            - il permet de cibler de manière spécifique certains élément 
+            - une même class peut être utilisée sur plusieurs balises dans le même document 
+            - Une selection de class commence toujours par un point
+         -->
+      <h3>Titre de la section</h3>
+      <!-- p{texte n° $}*10 -->
+      <p>texte n° 1</p>
+      <p>texte n° 2</p>
+      <p>texte n° 3</p>
+      <p>texte n° 4</p>
+      <p>texte n° 5</p>
+      <p>texte n° 6</p>
+      <p>texte n° 7</p>
+      <p>texte n° 8</p>
+      <p>texte n° 9</p>
+      <p>texte n° 10</p>
+      <div class="zoneA">Zone A</div>
+      <div class="zoneB">Zone B</div>
+      <!-- div.nomDeClasse -->
+      <!-- div#nomDeId -->
+      <div id="zoneC ">Zone C</div>
+      <!-- - id="" -> est un attribut qui a le même rôle qu'une class, MAIS doit être unique sur la page( donc on va moins l'utiliser)
+        - Un seul attribut id par balise est possible
+        - On le cible en css avec #
+    -->
+      <div id="zoneD">
+        Zone <span>D</span> Zone <span>D</span> Zone <span>D</span>
+      </div>
+    </section>
+    <!-- section>div#zone1 -->
+    <section>
+      <div id="zone1">
+        <h3>Titre de la zone 1</h3>
+        <p>Zone 1, j'ai un identifiant zone 1</p>
+      </div>
+      <div>
+        <p class="psde">
+          Sa majesté, l'atesse royale <span>Elisabeth II</span>
+        </p>
+      </div>
+    </section>
+
+    <h4>Titre de niveau 4</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis
+      est ab accusamus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis
+      est ab accusamus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio omnis
+      est ab accusamus.
+    </p>
+    <a href="#" title="mon premier lien "> Lien 1</a>
+    <a href="#">Lien 2</a>
+    <a href="#" title="Cliquez ici">Lien 3</a>
+    <a href="#" title="mon 4éme lien">Lien 4</a>
+
+    <ul>
+      <li>Elément 1</li>
+      <li>Elément 2</li>
+      <li>Elément 3</li>
+    </ul>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
