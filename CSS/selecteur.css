@@ -1,0 +1,49 @@
+body{
+    border: 2px solid black;
+    margin-block: 20px;
+    margin-inline: 35px;
+    /* padding: 10PX; */
+}
+
+#conteiner {
+    display: flex;
+    justify-content: space-between;
+    margin : auto;
+    border: 2px solid red;
+    height: 650px;
+    width: 50%;
+
+}
+
+.a{ 
+    
+    background-color: aqua;
+
+    
+    
+}
+.b{
+    
+    background-color: greenyellow;
+    
+}
+.c{
+    
+    background-color: rgb(137, 62, 62);
+    
+
+}
+.d{
+
+    background-color: aqua;
+    
+}
+.taille {
+    /* text-align: center; */
+    /* margin: 20PX auto; */
+    height: 100px;
+    width: 80px;
+}
+img{
+    width: 100%;
+}

@@ -1,0 +1,423 @@
+* {
+     /*  le sélecteur * permet de sélectionner tout les élément html qui sont sur mon document */
+     margin: 0;
+     box-sizing: border-box; /* par défaut les marges intérieur et les bordures sont ajoutées en dehors de la boite avec la propriété box-sizing on as la possibilité de contrôler ce comportement avec la valeur border-box le pading et border seront compris dans width et height */
+}
+body {
+     /* background-color: red ; */
+     background-image: url(../img/concrete-texture.png);
+     
+}
+
+header {
+     background-color: #6a7a78;
+}
+
+h1 {
+     text-align: center;
+     color: #fff;
+     font-size: 40px;
+     padding: 50px 0;
+}
+
+h1 span {
+     color: #1B365C;
+     font-weight: bolder;
+}
+main {
+     background-color: rgba(178, 178, 178, .30);
+     width: 80%;
+     margin: 0 auto;
+     padding: 100px 0;
+
+}
+
+section {
+     margin: 70px;
+}
+
+h2 {
+     color: #A62946;
+     font-size: 30px;
+     padding: 30px;
+}
+
+h3{
+     font-size: 25px;
+     color: #1B365C;
+     font-style: italic;
+     padding: 25px  ;
+}
+
+
+.carre {
+     height: 170px;
+     width: 170px;
+     background-color: #f8D771;
+     margin: 10px;
+     text-align: center;
+     font-size: 22px;
+     color: #004445;
+     border: 2px solid darkred;
+     line-height: 170px ;
+}
+
+
+/* ********************************************* Float  ******************************************************** */
+
+.alignement  {
+     /*créer l'effet flottant : c'est de retirer un élément du flux normal, puis le placer sontre un bord de son élément parent ou aussi contre le bord d'un élément flottant le précédent ensuite les autres élément se place autour 
+     il y'a 3 valeur à passer à la propriété float: left, rigtht , none
+     les élément qui sont en float implique que le parent de ses élément perd sa hauteur (height = 0)
+     */
+     float: left ;
+}
+
+.superpose {
+     /*  la propriété clear permet de supprimer l'effet flottant et empêcher un élément de se postionner à coté d'un élément flottant  et par a suite reprendre le flux normal, en générale en crée un faut élément (expl une div dive avec une classe )qui applique le clear gâce à ce clear le parent reprend sont hauteur et son comportement normal,
+     On peut aussi utiliser une autre technique pour ne pas polluer le html avec des élément vide 
+     On rajoute à l'élément parent un overflow: hidden qui aura la même utilité que le clear: both
+     
+     */
+     clear: both;
+}
+
+.boite {
+     background-image: url(../img/image2.jpg) ;
+     background-repeat: no-repeat;
+     background-size: cover   ;
+     height: 300px;
+     width: 450px;
+     border: 5px solid #fff;
+     float: left;
+}
+
+/* ******************************************** Position relative et absolute ************************************* */
+
+/* Un élément en position absolute : un élément est positionnné d'une manière absolu par rapport à un autre élément donc il sort du flux  et va se positionner soit par rapport à son dernier ancêtre positionné ou si aucun parent n'est positionné donc l'élément se positionne par défaut par rapport à l'élément racine la balise <html> (possible de mettre des valeur négatives) */
+.absolute {
+     background-color: yellow;
+     width: 100px;
+     height: 100px;
+     line-height:100px ;
+     text-align: center;
+     /* Un élément de position absolute est positionné par rapport à l'élément html */
+     position: absolute; 
+     left: 10%;
+     top: 24%;
+     
+}
+.zone {
+     height: 70px;
+     background-color: orchid;
+}
+
+.zone1, .zone2, .zone3, .zone4 {
+     border: 1px solid #fff ;
+     height: 250px;
+     width: 25%;
+     float: left;
+}
+
+.zone1, .zone3 {
+     background-color: #698474;
+}
+.zone2, .zone4 {
+     background-color: #bac7a7;
+}
+
+/* Un élément positionné en relatif ne bouge pas , il faut lui appliqué eu moins 1 des 4 valeurs possible : left, top, right ou bottom
+Il se place au valeurs définies par rapport à sa place d'origine (possible de mettre des valeur négatives)
+ */
+.relative {
+     background-color: #2d5c7f;
+     width: 400px;
+     height: 400px;
+     position: relative;
+     left: 200px;
+     bottom: 10px;
+}
+
+/*  Un élément positionné en absolute et qui se trouve dans un élément avec une postion relative
+( enfant -> position: absolute, parent -> position: relative)
+Cet élément se positionnera dans la page  avec les valeurs définis par rapport à ce parent qui est en position relative .
+*/
+.relative div{
+     background-color: orangered;
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     top: 15px;
+     right: 0;
+ }
+
+.blocPhotoSf {
+     width: 400px;
+     position: relative;
+     overflow: hidden;
+
+}
+
+.blocPhotoSf img {
+     width: 100%;
+
+}
+.photoSfLegende {
+     background-color: rgba(0, 0, 0, .75);
+     height: 70px;
+     line-height: 70px;
+     text-align: center;
+     color: white;
+     font-weight: bolder;
+     position: absolute;
+     width: 100%;
+     bottom: -90px;
+     
+}
+
+.blocPhotoSf:hover .photoSfLegende {
+     bottom: 0;
+     transition: 1s;
+}
+
+
+
+.blocCupcake {
+     border: 5px solid #2d5c7f;
+     width: 500px;
+     position: relative;
+     padding: 0;
+}
+.blocCupcake img {
+     width: 100%;
+     display: block;
+     
+}
+
+.blocCupcake h4{
+     background-color: rgba(0, 0, 0, .75); 
+    /*  Ici on utilisant la propriété opacity on applique l'opacité sur l'élément avec son contenu  même le h4 prend  de l'opacité  */
+     /* background-color: #A62946;
+     opacity: 1; */
+     height: 70px;
+     line-height: 70px;
+     text-align: center;
+     color: whitesmoke;
+     font-weight: bolder;
+     position: absolute;
+     bottom: 150px;
+     width: 100%;
+
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48;
+  color: rgb(149, 192, 227);
+  font-size: 50px !important;
+}
+
+/************************************************* Position fixed ************************************************/
+
+
+/* élément en position fixed est fixé par raport à la fenêtre il reste figé et il passe au dessus des autres éléments */
+.btnRetour {
+      position: fixed;
+      bottom: 40px;
+      right: 200px;
+}
+
+.fa-arrow-circle-up {
+     font-size: 50px !important;
+     color: #de99a9;
+}
+
+.fa-arrow-circle-up:hover {
+     color: #A62946;
+}
+
+/************************************************* Z-index ************************************************/
+
+/* Le z-index permet au navigateur de déterminer l'ordre d'affichage de deux élément qui sont en position absolute et qui se superpose 
+par défaut et si je n'indique pas des valeur à cette propriété les élément s'affiche en respectant l'ordre des élément dans le html
+avec le z-index on définit comment un élément est placé sur l'axe z : c'est un axe invisible qui détermine la profondeur: plus un élément a un z-index elevé (valeur élevé) plus il va être au premier plan
+*/
+.rela{
+     position: relative;
+}
+.rouge, .vert, .bleu {
+     width: 100px;
+     height: 100px;
+     color: #fff;
+     line-height: 100px;
+     text-align: center;
+     font-weight: bold;
+     position: absolute;
+}
+
+.positionnement {
+     height: 300px;
+}
+.rouge {
+     background-color: red;
+     z-index: 3;
+     top:20px;
+     left:20px
+}
+.vert {
+     background-color: green;
+     z-index: 2;
+     top: 40px;
+     left: 40px;
+}
+.bleu{
+     background-color: blue;
+     z-index: 1;
+     top: 100px;
+     left: 100px;
+}
+
+/************************************************* Zoning ************************************************/
+.zoning>div {
+     margin:  20px auto;
+}
+
+#zoning1{
+   background-color: #ffd6d6; 
+    border: 1px solid white;
+    width: 798px;
+    text-align: center;
+    /* overflow:hidden ; */
+}
+#zoning1 header{
+     background-color: #f7f39a;
+     height: 70px;    
+}
+
+#zoning1 aside {
+     background-color: #10828c;
+     height: 525px;
+     width: 20%;
+     color: white;
+     float: left;
+}
+#zoning1 section {
+     background-color: #38817a ;
+     height: 525px;
+     width: 80%;
+     float: left;
+     margin: 0;
+     padding: 0;
+     
+}
+
+#zoning2 {
+     width: 798px;
+     background-color: #ffd6d6;
+     border: 1px solid white;
+     text-align: center;
+     /* overflow: hidden; */
+}
+
+#zoning2 header {
+   background-color: #10828c;  
+   height: 70px;
+   line-height: 70px
+}
+
+#zoning2 aside {
+     background-color: tomato;
+     height: 500px;
+     line-height: 500px;
+     width: 20%;
+     float: left;
+
+}
+#zoning2 .milieu {
+     background-color: thistle;
+     height: 500px;
+     line-height: 500px;
+     width: 60%;
+     float: left;
+}
+
+#zoning3 {
+     background-color: #ffd6d6; 
+     width: 800px;
+     color: white;
+     text-align: center  ;
+}
+
+#zoning3 header {
+     background-color: #818e8c;
+     height: 180px;
+}
+
+#zoning3 header .haut  {
+     background-color: #203562;
+     width: 20%;
+     height: 180px;
+     float: left;
+   
+}
+#zoning3 header .haut1 {
+     background-color: #3e588f;
+     width: 60%;
+     float: left;
+     height: 180px;
+}
+
+#zoning3 nav {
+     background-color: #085269;
+     height: 80px;
+}
+
+#zoning3 aside {
+     background-color: #446878;
+     height: 750px;
+     width: 20%;
+     float: left;
+}
+#section {
+     float: left;
+     width: 80%;
+     margin: 0;
+}
+
+#zoning3 section .a {
+     background-color: #c0c5cd;
+     float: left;
+     width: 50%;
+     height: 250px;
+}
+#zoning3 section .b {
+     background-color: #203562;
+     float: left;
+     width: 50%;
+     height: 250px;
+
+}
+
+#zoning3 section.slideshow {
+   background-color: #314a52 ;
+   height: 200px;
+   margin: 0;
+}
+
+#zoning3 .c {
+     background: #c0c5cd;
+     float: left;
+     width: 25%;
+     height: 300px;
+
+}
+#zoning3  .d {
+     background: #203562;
+      float: left;
+      width: 25%;
+      height: 300px;
+}

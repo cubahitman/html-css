@@ -1,0 +1,353 @@
+/* Feuille de style pour la page de flexbox */
+
+/* Principe du flexbox:  permet de passer d'un contexte bloc à un contexte flex, pour le faire il faut appliquer un modéle de boite flexible sur le conteneur de mes éléments, : le conteneur = l'élément  parent.
+Dans le contexte flex on vas  avoir un axe principale (main axis), il est par défaut horizontal et il commence à gauche. Les élément qui sont à l'intérieur du parent ( avec un contexte flex) vont être distribués en fonction de cet axe principal.
+La terminologie : 
+    - le parent  avec du flex => container
+    - Les éléments à l'intérieur du container =< items (item ausingulier)
+*/
+
+p {
+    font-size: 20px;
+    
+}
+div {
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;  
+}
+span {
+    font-weight: bold;
+    color: darkmagenta;
+}
+.style {
+    border: 1px solid #333;
+}
+.style div {
+    width: 200px;
+    height: 150px;
+}
+
+.style :nth-child(1) {
+    background-color: orange;
+}
+
+.style :nth-child(2) {
+    background-color: blue;
+}
+.style :nth-child(3) {
+    background-color: green;
+}
+/* *************** A - Comportement normal******** */
+
+/* Comportement par défaut des div */
+
+/* ************ B- Ajout de flex au conteneur *********** */
+#conteneurB {   
+    display: flex; 
+    /* Instructiob à donner au parent , suite à cette application les éléments dans le conteneurBà totalement changé: les div s'affichent côte à côte */
+}
+
+/* Column */
+
+#conteneurColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+#conteneurColumn {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row-reverse */
+
+#conteneurRowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* column-reverse */
+#conteneurColumnReverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Wrap */
+#conteneurC {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Wrap-reverse */
+#conteneurCReverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+/* *********** E - Alignement ***********/
+
+/* flex-start  - direction horizontale*/
+#conteneurFlex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+/* flex-end  - direction horizontale*/
+#conteneurFlex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+/* center - direction horizontale */
+#conteneurCenter {
+    display: flex;
+    justify-content: center;
+}
+/* space-between - direction horizontale */
+#conteneurSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+/* space-around - direction horizontale */
+#conteneurSpaceAround{
+    display: flex;
+    justify-content: space-around;
+}
+/* space-evenly- direction horizontale */
+#conteneurSpaceEvenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* flex-start  - direction verticale*/
+
+#conteneurFlex-startVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+/* flex-end  - direction verticale*/
+
+#conteneurFlex-endVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 800px;
+
+}
+/* center  - direction verticale*/
+
+#conteneurCenterVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+
+}
+/* space-between- direction verticale*/
+
+#conteneurBetweenVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+
+}
+/* space-around- direction verticale*/
+
+#conteneurAroundVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1000px;
+
+}
+/* space-evenly- direction verticale*/
+
+#conteneurEvenlyVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 1000px;
+
+}
+
+/* *************** Aligner sur l’axe secondaire******** */
+/* flex-start - direction horizontale */
+
+#conteneurE-AI-FS-H {
+    display: flex;
+    height: 400px;
+    align-items: flex-start;
+}
+
+
+/* flex-end - direction horizontale */
+#conteneurE-AI-FE-H {
+    display: flex;
+    height: 400px;
+    align-items: flex-end;
+}
+
+/* center - direction horizontale */
+#conteneurE-AI-C-H {
+    display: flex;
+    height: 400px;
+    align-items: center;
+}
+
+/* stretch - direction horizontale */
+#conteneurE-AI-S-H {
+    display: flex;
+    align-items: stretch;
+    height: 400px;
+}
+
+/* baseline - direction horizontale */
+#conteneurE-AI-B-H {
+    display: flex;
+    align-items: baseline; 
+    /* Les éléments vont être alignés dans leur axe secondaire de telle sorte à ce que leurs lignes de base (ligne imaginaire sur laquelle est écrit le texte) soit alignées */
+    height: 400px;
+}
+#conteneurE-AI-B-H  :nth-child(1){
+   padding: 30px;
+    
+}
+#conteneurE-AI-B-H  :nth-child(3){
+    padding: 50px;
+     
+}
+
+#conteneurE-AI-C-V{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    align-items: center;
+}
+
+/* Aligner un seul élément -> align-self */
+#conteneurE-AS {
+    display: flex;
+    height: 300px;
+    align-items: center;
+    
+}
+
+#conteneurE-AS :nth-child(2){
+    align-self: flex-end;
+}
+/* -----F - Répartir plusieurs lignes------ */
+
+#conteneurF {
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+}
+#conteneurF div {
+    width: 200px;
+    height: 80px;
+}
+
+#conteneurF :nth-child(1){
+
+	background-color: orange;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(2){
+
+	background-color: blue;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(3){
+
+	background-color: green;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(4){
+
+	background-color: orange;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(5){
+
+	background-color: blue;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(6){
+
+	background-color: green;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(7){
+
+	background-color: orange;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(8){
+
+	background-color: blue;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(9){
+
+	background-color: green;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(10){
+
+	background-color: orange;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(11){
+	background-color: blue;
+	border: 1px solid black;
+}
+#conteneurF :nth-child(12){
+
+	background-color: green;
+	border: 1px solid black;
+}
+
+.stretch {
+    align-content: stretch;
+}
+.start {
+    align-content: flex-start;
+}
+.end {
+    align-content: flex-end;
+}
+.center {
+    align-content: center;
+}
+.between {
+    align-content: space-between;
+}
+.around {
+    align-content: space-around;
+}
+.evenly {
+    align-content: space-evenly;
+}
+/* Par défaut */
+#conteneurG {
+    display: flex;
+}
+
+/* Order appliqué */
+
+#conteneurGOrder {
+    display: flex;
+
+}
+
+#conteneurGOrder :nth-child(1){
+    order: 3;
+}
+ #conteneurGOrder :nth-child(2){
+    order: 1;
+}
+ #conteneurGOrder :nth-child(3){
+    order: 2;
+} 

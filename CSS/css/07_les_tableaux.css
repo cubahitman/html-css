@@ -1,0 +1,55 @@
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: antiquewhite;
+    /* Largeur de la page 50% de la taille de l'écran du navigateur */
+    width: 50%; 
+    /* gestion automatique des marges , pour que le contenu de body soit centré dans la fenêtre  */
+    margin: auto;
+    padding-bottom: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+caption {
+    color: #6e2142;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table {
+    text-align: center;
+    margin-top: 50px;
+    border-collapse: collapse;
+    /* par défaut la bordure contient 2 traits, pour que le trai soit unique on utilise la propriété border-collapse averc una valeur collapse  */
+    border: 3px solid #6e2142 ;
+    width: 90%;
+    background-color: darksalmon;
+}
+
+th, td {
+    border: 1px solid #943855;
+    padding: 10px;
+}
+thead, tfoot {
+    background-color: #be7575;
+}
+
+h2 {
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+#demoColspan td {
+    height: 30px;
+    width: 30px;
+}
+.noir {
+    background-color: black;
+}

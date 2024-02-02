@@ -1,0 +1,34 @@
+
+h1 {
+    font-family : 'Dancing Script', cursive ;
+    text-transform: uppercase;
+    /* transformation du texte */
+}
+p span  {
+    font-size: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+h3 {
+    color: red;
+    text-align: center;
+    /* permet d'aligner le texte à gauche, à droite, justifié ou le centre  ici -> Centrage du text */
+    font-style:italic;
+    /* Style de police */
+    font-weight:bold;
+    /* L'épaisseur de la police 
+    100 -> très fin, 900 -> très épais */
+}
+
+
+h4 span {
+    color: red;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+ul li {
+    list-style-type: square;
+}
+/* ul li -> selectionne tous les li qui se trouve dans un élément ul
+list-style-type -> permet de spécifier le type de puce
+ */

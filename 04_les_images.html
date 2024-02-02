@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yacine Djediden : Les images en HTML" />
+    <meta name="author" content="Yacine Djediden" />
+    <link rel="stylesheet" type="text/css" href="css/04_les_images.css" />
+    <title>Les images en HTML</title>
+  </head>
+
+  <body>
+    <h1>Les images</h1>
+    <!-- 
+        La balise qui va nous permettre d'insérer une image c'est la balise <img>
+        C'est une balise de type orpholine 
+        L'attribut "src" : il permet d'indiquer où se trouve l'image que l'on veut insérer
+        L'attribut "alt" : « texte alternatif » on doit toujours indiquet un texte alternatif à l'image, description de l'image.Ce texte sera affiché à la palce de l'image si celle-ci ne peut pas être télécharger sur la page, ou dans les navigateur de personne handicapée (non-voyants) 
+    -->
+
+    <section>
+      <h2 style="color: black; text-transform: uppercase; font-style: italic">
+        1 / Image insérée en HTML
+      </h2>
+
+      <img src="img/image1.jpg" alt="image d'un chat qui joue au ficelle" />
+      <!--  Ici dans src j'ai mis le chemin relatif de l'image -->
+
+      <img
+        src="https://i.notretemps.com/1400x787/smart/2021/05/03/trois-facons-de-distraire-votre-chat-a-la-maison.jpeg"
+        alt="Un chaton touuuuuut mignion"
+        width="500"
+      />
+      <!-- Ici dans src j'ai mis un chemin absolu de l'image -->
+
+      <img
+        src="img/image2.jpg"
+        alt="Un chaton gris avec des yeux bleu"
+        title="Un chaton gris avec des yeux bleu"
+      />
+      <!-- Je rajoute une infobulle sur l'image  -->
+    </section>
+
+    <section>
+      <h2>2 / Les figures</h2>
+      <!--  Les figure sont des élément qui viennent enrichir le texte pour compléter les information sur l'image -->
+      <!--  Une figure est plus souvent accompagné d'une légende.Pour ajouter une légende, utilisez la balise <figcaption> à l'intérieur de la balise <figure> comme ceci: -->
+
+      <figure>
+        <img src="img/image3.jpg" alt="Image d'un chat de race siamois" />
+        <figcaption>
+          Le chat Siamois est sans nul doute le plus connu des chats de maison ;
+          son élégance et son caractère à part en font un compagnon aux qualités
+          nombreuses.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- section>h2+img*2 -->
+
+    <section class="imageFond">
+      <h2>3 / Les images de fond insérée en CSS</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
+        earum, voluptates voluptate rerum, magni fugit eos et dolorum saepe
+        dolores facere labore ut id a consectetur! Optio facere quasi maiores.
+        Sequi, neque! Sunt minus vero provident molestiae, fugit et quod porro,
+        harum unde in deleniti quos dolore modi laboriosam illo ad. Asperiores
+        architecto vel mollitia est sint odio consequuntur nemo. Explicabo esse
+        cupiditate, debitis laborum, similique cumque dolores officia veritatis
+        ullam at quod sapiente laboriosam? Incidunt reiciendis similique ut
+        architecto, voluptate rerum adipisci recusandae repellat ratione eos qui
+        hic impedit?
+      </p>
+    </section>
+
+    <section>
+      <h2>4/ Image avec animation en CSS</h2>
+      <img src="img/cheval3.jpg" alt="cheval" class="image" />
+      <br />
+      <img src="img/cheval3.jpg" alt="cheval" class="image rotation360" />
+    </section>
+
+    <section>
+      <h2>5 / Image de type block</h2>
+      <img src="img/cheval3.jpg" alt="cheval" class="imgCheval" />
+      <img src="img/cheval3.jpg" alt="cheval" class="imgCheval" />
+      <img src="img/cheval3.jpg" alt="cheval" class="imgCheval" />
+    </section>
+  </body>
+</html>

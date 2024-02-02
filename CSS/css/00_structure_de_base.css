@@ -1,33 +1,10 @@
 /* Feuille de style */
-/*
-selecteur
-{
-    propriété : valeur;
-    propriété : valeur;
+
+/* color -> couleur du texte */
+h1 {
+    color: #fd9644;
 }
 
-*/
-h1
-{
-    /* color -> couleur du texte */
-    color: blue;
-}
-h4 span
-{
-    color: red;
-}
-p span
-{
-   font-size: small;
-  
-}
-p {
-    text-align: center;
-}
-p small
-{
-    font-size: x-small;
-}
 
 /* 
     Les valeurs possibles pour les couleurs:

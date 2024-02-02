@@ -1,0 +1,29 @@
+.container {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 150px
+}
+.container div {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 400px;
+    top: -100px;
+    
+}
+.container p {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    line-height: 500px;
+}
+.container div p {
+    line-height: 160px;
+} 
+p:hover {
+    color: yellow;
+}

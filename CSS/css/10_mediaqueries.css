@@ -1,0 +1,140 @@
+body {
+    background-color: brown;
+}
+
+h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+/* 
+Le Média Query est une technique qui vise à changer le designe d'un site internet selon les caractéristiques de l'écran utilisé. C'est un élément important du CSS3.
+Pour le faire on utilise les requêtes multimédia.
+Une requête multimédia permet d'appliquer des styles css en fonction de la présence ou de la valeur des caractéristique de l'appareil.
+Les requêtes multimédia peuvent être appliquées de 2 façons : 
+    -> En chargeant une feuille de style CSS différentes : ( pas recommandé car on essaie de centraliser notre style css autour d'1 feuille de style)
+    <link rel="stylsheet" href="style.css"/>
+    <link rel="stylsheet" href="petite_resolution.css" media="screen and (max-width:1280px)"/> => pour les écrans qui ont une résolution inférieurs à 1280px
+    -> En écrivant directement les rêgles dans la feuille de style CSS:
+    Cette technique consiste à utiliser ce qu'on appelle les rêgle css @ : c'est les @rules( prononcez "at-rules") fournit des instructions sur ce que css doit effectuer ou comment il doit se comporter si une condition est statisfaites.
+    Ici on utilise la @media : la rêgle pour inclure un bloc de propriétés css uniquement si une certaine condition est vraie .
+    -> les types d'écran ou les support d'affichages, il existe 4 cxatégories de media types : 
+        - print : déstiné à un support paginé, au document vus sur écran en mode apercu avant inpression.
+        - screen : pour les appareils dotés d'un écran: ordinateur, tablettes, mobiles et tv 
+        - speech : pour les lecteurs d'écran qui "lisent" par synthése vovcale 
+        - all : tous les types d'appareils.
+    ->les propriétés: c'est par exemple une largeur de la zone d'affichage, la hauteur dela zonr d'affichage, une orientation du périphérique 
+*/
+
+
+/* Pour les très grand ércans (xxLarge) -> supérieur à 1400px */
+@media (min-width:1400px) {
+    /* largeur minimale 1400px c'est le breakpoint (point de rupture)
+        Le breakpoint sont des seuils de déclenchement. Ils servent à déterminer à quel
+        moment les rêgles CSS d'une media query s'appliquent au design dela page    */
+    body {
+        background-color: pink;
+    }
+    .xLarge, .large, .medium, .small, .xSmall {
+        display: none;
+    }
+}
+
+/* Pour les grands écrans (grands ordinateur de bureau : xLarge) -> écran entre 1200px et 1399px */
+@media (min-width:1200px) and (max-width:1399px){
+    /* Largeur minimale et largeur maximale */
+    body {
+        background-color: teal;
+        color: white;
+    }
+    .xxLarge, .large, .medium, .small, .xSmall {
+    display: none;
+    }
+}
+
+/* Pour les grands appareils (ordinateur de bureau et ordinateur portable : large) -> écran entre 992 et 1199 */
+@media (min-width:992px) and (max-width:1199px){
+    /* Largeur minimale et largeur maximale */
+    body {
+        background-color: khaki;
+    }
+
+    .xxLarge, .xLarge, .medium, .small, .xSmall {
+        display: none;
+    }
+}
+/* Pour les appareils moyens (tablettes : medium) -> écran entre 768px et 991px */
+@media (min-width:768px) and (max-width:991px){
+    /* Largeur minimale et largeur maximale */
+    body {
+        background-color: purple;
+        color: white;
+    }
+    .xxLarge, .xLarge, .large, .small, .xSmall {
+        display: none;
+    }
+
+}
+/* Pour les petits appareils (téléphone mùobiles : small) -> écran entre 576px et 767px  */
+@media (min-width:576px) and (max-width:767px){
+    /* Largeur minimale et largeur maximale */
+    body {
+        background-color: orange;
+    }
+    .xxLarge, .xLarge, .large, .medium, .xSmall {
+        display: none;
+    }
+
+}
+
+/* Pour les très petits (xSmall) -> taille de l'écran inférieur à 575px */
+@media (max-width:575px){
+    body {
+        background-color: green;
+        color: white;
+    }
+    .xxLarge, .xLarge, .large, .medium, .small {
+        display: none;
+    }
+
+}
+   
+/* **************************************************************************************************** */
+
+/*  sur les écrans et quand la largeur de la fenêtre est au max 1280px */
+@media screen and (min-width:767px) and (max-width:1280px) {
+
+
+}
+
+/*  On rajoute only afin d'apliquer un style uniquement si l'intégralité de la requête est vérifiée. Il permet d'empêcher les anciens navigateurs qui ne prennent pas en charge les requêtes média avec les caractéristiques média d'appliquer les styles concernés */
+
+@media only screen and (max-width:1280px) {
+
+
+}
+
+/*  En mode impression  */
+@media print {
+
+}
+
+/*  Sur les téléviseurs  */
+@media tv {
+
+}
+
+/*  Sur tout types d'écran */
+@media all and (min-width:767px) and (max-width:1280px) {
+
+}
+
+/*  Sur tous types d'écran orienté verticalement */
+@media all and (orientation: portrait){
+
+}
+
+/*  Sur tous types d'écran orienté horizontalement */
+@media all and (orientation: landscape){
+
+}
